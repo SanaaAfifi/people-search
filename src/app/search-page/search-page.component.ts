@@ -18,14 +18,14 @@ export class SearchPageComponent implements OnInit {
   }
   searchPeople(filterText?: string) {
     this.searchService.search(filterText).subscribe(result => {
-      debugger; 
+     
       if (filterText && result.name) {
         this.people = [result];
       } else if (result.count) {
         this.people = result.results;
-      } else {
-        this.people = [];
       }
+      else
+      {this.people = [];}
     },
     (error) => { this.people = [];});
   }
@@ -33,7 +33,7 @@ export class SearchPageComponent implements OnInit {
     this.filterText = value;
     this.searchPeople(this.filterText);
   }
-  dropped(event: CdkDragDrop<string[]>) {
+  dropped(event) {
     moveItemInArray(
        this.people, 
        event.previousIndex, 

@@ -2,7 +2,7 @@
 
 <div class="content">
   <div>
-    <input type="text" class="form-control" (input)="onSearchChange($event.target.value)" />
+    <input type="text" class="search-input" (input)="onSearchChange($event.target.value)" />
   </div>
   <div class="cards" cdkDropList (cdkDropListDropped)="dropped($event)">
     <div class="card" *ngFor="let person of people" cdkDrag>
@@ -25,4 +25,5 @@
       </mat-card>
     </div>
   </div>
+  <div class='no-results' *ngIf="filterText&&people.length == 0"> No results found </div>
 </div>
