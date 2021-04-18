@@ -1,0 +1,28 @@
+
+
+<div class="content">
+  <div>
+    <input type="text" class="form-control" (input)="onSearchChange($event.target.value)" />
+  </div>
+  <div class="cards" cdkDropList (cdkDropListDropped)="dropped($event)">
+    <div class="card" *ngFor="let person of people" cdkDrag>
+      <mat-card class="card-content" >
+        <mat-card-header>
+          <mat-card-title class="card-title">{{ person.name }}</mat-card-title>
+        </mat-card-header>
+
+        <mat-card-content class="card-text">
+          <p>
+            URL: {{ person.url }}
+          </p>
+          <p>
+            Height: {{ person.height }}
+          </p>
+          <p>
+            Home World: {{ person.homeworld }}
+          </p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div>
