@@ -1,14 +1,41 @@
 $gray-dark: #696969;
 $gray: #999999;
 $gray-light: #cccccc; 
-.content {
-  padding: 16px;
+.cdk-drag-preview {
+  box-sizing: border-box;
+  border-radius: 4px;
+  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
+              0 8px 10px 1px rgba(0, 0, 0, 0.14),
+              0 3px 14px 2px rgba(0, 0, 0, 0.12);
+}
 
+.cdk-drag-placeholder {
+  opacity: 0;
+}
+
+.cdk-drag-animating {
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+h1 {
+  font-family: arial, sans-serif;
+  font-size: 46px;
+  font-weight: bold;
+  margin:30px; 
+  text-align: center;
+}
+.content {
+  margin: 16px;
+.no-result{
+  color: $gray-dark;
+          font-size: 1.25rem;
+          font-weight: 300;
+          letter-spacing: 2px;
+          text-transform: uppercase;
+          margin : 2vw;
+}
   .cards {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-
     .card {
       width: 20vw;
       display: flex;
@@ -18,8 +45,8 @@ $gray-light: #cccccc;
       background-color: white;
       border-radius: 0.25rem;
       box-shadow: 0 20px 40px -14px rgb(0 0 0 / 25%);
-      overflow: hidden;
-      flex-direction: column-reverse;
+      overflow: hidden; 
+      flex-wrap: wrap;
         .card-title {
           color: $gray-dark;
           font-size: 1.25rem;
@@ -41,7 +68,7 @@ $gray-light: #cccccc;
     border-radius: 5px;
     border: 1px solid $gray-light;
     box-shadow: 0 20px 40px -14px rgb(0 0 0 / 25%);
-    margin-left: 4vw;
+    margin-left: 2vw;
     color: $gray;
     font-size: large;
     padding-left: 10px;
