@@ -18,9 +18,9 @@ $gray-light: #cccccc;
 }
 h1 {
   font-family: arial, sans-serif;
-  font-size: 46px;
+  font-size: 3rem;
   font-weight: bold;
-  margin:30px; 
+  margin: 4vw;
   text-align: center;
 }
 .content {
@@ -70,7 +70,6 @@ h1 {
     box-shadow: 0 20px 40px -14px rgb(0 0 0 / 25%);
     margin-left: 2vw;
     color: $gray;
-    font-size: large;
-    padding-left: 10px;
+    font-size: large; 
   }
 }
